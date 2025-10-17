@@ -8,7 +8,6 @@ Desenvolver um sistema escalável e resiliente para processar reclamações de c
 - Integração com sistemas legados
 - Observabilidade completa
 
----
 
 # Sistema de Gestão de Reclamações
 
@@ -16,7 +15,6 @@ Arquitetura event-driven com microserviços para processamento escalável de rec
 
 **Este repositório contém**: Diagramas de arquitetura, respostas do case técnico e implementação do classificador automático de reclamações em C#.
 
----
 
 ## 💡 Como Resolvi
 
@@ -31,17 +29,16 @@ Estruturei uma arquitetura orientada a eventos com microserviços desacoplados:
 
 **Resultado**: Sistema que processa reclamações com custo de $0.005 cada, uptime de 99.95% e latência P95 de 320ms.
 
----
 
 ## 🏗️ Arquitetura
 
 ### Diagrama Funcional
 
-![Diagrama Funcional](./diagramas/diagrama-funcional.jpg)
+![Diagrama Funcional](./diagramas/diagrama-funcional.png)
 
 ### Diagrama de Arquitetura Técnica
 
-![Diagrama de Arquitetura](./diagramas/diagrama-arquitetura.jpg)
+![Diagrama de Arquitetura](./diagramas/diagrama-arquitetura.png)
 
 ### Padrões Arquiteturais
 
@@ -57,7 +54,6 @@ API Gateway → Fila Ingestion → Processing/OCR →
 Fila Classificação → Classification → Fila Armazenamento →
 Storage → PostgreSQL + S3 + Redis
 
----
 
 ## 🚀 Tecnologias
 
@@ -71,7 +67,6 @@ Storage → PostgreSQL + S3 + Redis
 - **ECS Fargate** - Orquestração de containers
 - **CloudWatch + SNS** - Monitoramento e alertas
 
----
 
 ## ⚙️ Como Executar
 
@@ -83,27 +78,25 @@ Storage → PostgreSQL + S3 + Redis
 
 ### Executar a função IdentificarCategoriasDaReclamação
 
-**Clone o repositório**
+### Clone o repositório
 
 git clone https://github.com/beatriznonato/sistema-gestao-reclamacoes.git
 
-**Entre na pasta do código**
+### Entre na pasta do código
 
 cd sistema-gestao-reclamacoes/src
 
-**Compile o projeto**
+### Compile o projeto
 
 dotnet build
 
-**Execute**
+### Execute
 
 dotnet run
 
-**Output esperado:**
+### Output esperado:
 
 Categorias encontradas: acesso, aplicativo
-
----
 
 ## 📊 Métricas do Sistema
 
@@ -116,15 +109,11 @@ Categorias encontradas: acesso, aplicativo
 | Cache Hit Rate   | >75%   | 80%    |
 | Custo/Reclamação | <$0.01 | $0.005 |
 
----
-
 ## 📚 Documentação
 
 - [Requisitos do Sistema](./documentos/requisitos.md)
 - [Respostas do Desafio Técnico](./documentos/respostas-case.md)
 - [PDF do Case Original](./documentos/case-tecnico.pdf)
-
----
 
 ## ⭐ Materiais de Referência
 
@@ -133,5 +122,3 @@ Materiais que me ajudaram no desenvolvimento deste projeto:
 - [System Design Primer](https://github.com/donnemartin/system-design-primer) - Guia completo de design de sistemas
 - [AWS Architecture Best Practices - YouTube](https://www.youtube.com/watch?v=yZfFQpBfEVI) - Práticas recomendadas AWS
 - [Microservices Architecture Explained - YouTube](https://www.youtube.com/watch?v=jog_FFD5GVk) - Conceitos de microserviços
-
----
